@@ -11,12 +11,18 @@ angular.module('noterious', [
     $urlRouterProvider.otherwise('/login');
 
     $stateProvider
-      .state('login', {
-        url:'/login',
-        templateUrl: 'app/login/login.tmpl.html',
-        controller: 'LoginCtrl',
-        controllerAs: 'login'
-      })
+        .state('login', {
+            url:'/login',
+            templateUrl: 'app/login/login.tmpl.html',
+            controller: 'LoginCtrl',
+            controllerAs: 'login'
+        })
+        .state('boards', {
+            url: '/boards',
+            templateUrl: 'app/boards/boards.tmpl.html',
+            controller: 'BoardsCtrl',
+            controllerAs: 'boards'
+        })
     ;
 
     /* HINT: Add this to your boards route to force authentication
