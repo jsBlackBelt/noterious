@@ -44,17 +44,17 @@ angular.module('noterious')
     ctrl.createBoard = function (board, isValid) {
       if (isValid) {
         ctrl.loading = true;
-        // CREATE BOARD
+        // CREATE BOARD - this should be implemented in a service that delegates to the server eventually
+        ctrl.boards[1234] = board;
         ctrl.resetForm();
       }
     };
 
-    ctrl.updateBoard = function (boardId, board, isValid) {
-      if (isValid) {
+    ctrl.updateBoard = function (boardId, board) {
         ctrl.loading = true;
-        // UPDATE BOARD
+        // UPDATE BOARD - this should be implemented in a service that delegates to the server eventually
+        ctrl.boards[boardId] = board;
         ctrl.cancelEditing();
-      }
     };
 
     ctrl.deleteBoard = function (boardId) {
