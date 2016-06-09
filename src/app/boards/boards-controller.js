@@ -22,23 +22,20 @@ angular.module('noterious')
     };
 
     ctrl.getBoards = function () {
-      ctrl.boards = {
-        1: {
-          description: "Anything and everything!",
-          isPublic: true,
-          title: "Random Ideas"
-        },
-        2: {
-          description: "BizDev Ideas",
-          isPublic: false,
-          title: "Hustle"
-        },
-        3: {
-          description: "this is a test",
-          isPublic: false,
-          title: "testing"
-        }
-      };
+      // step 1
+      ctrl.boards = BoardsModel.boards;
+
+      //  step 2 & 3:
+      // BoardsModel.all()
+      //     .then(function(boards) {
+      //         ctrl.boards = boards;
+      //     })
+      //     .catch(function(reason) {
+      //         // handle error
+      //     })
+      //     .finally(function () {
+      //         // do something
+      //     });
     };
 
     ctrl.createBoard = function (board, isValid) {
