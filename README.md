@@ -42,7 +42,7 @@ Get the Code
 -------------------
 Now go ahead and download the code.
 ```
-git clone https://github.com/simpulton/noterious.git
+git clone https://github.com/jsBlackBelt/noterious.git
 cd noterious
 ```
 
