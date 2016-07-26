@@ -38,7 +38,7 @@ angular.module('exercises', [
       getItems: getItems
     }
   })
-  .directive('item', function(){
+  .directive('itemRenderer', function(){
     return {
       templateUrl: 'item.tmpl.html'
     }
